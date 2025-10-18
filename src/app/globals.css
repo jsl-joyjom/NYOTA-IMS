@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #f5f5f5;
+    --foreground: #333333;
+  }
+}
+
+@layer components {
+  /* Nyota Button Styles */
+  .btn-primary {
+    @apply bg-gradient-to-r from-primary-900 to-primary-700 hover:from-primary-800 hover:to-primary-600 text-white font-medium py-3 px-6 rounded-lg transition-all duration-200 shadow-soft hover:shadow-card focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2;
+  }
+  
+  .btn-secondary {
+    @apply bg-white hover:bg-gray-50 text-primary-900 font-medium py-3 px-6 rounded-lg border border-primary-200 transition-all duration-200 shadow-card hover:shadow-soft focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2;
+  }
+  
+  .btn-accent {
+    @apply bg-gradient-to-r from-accent-500 to-accent-400 hover:from-accent-600 hover:to-accent-500 text-white font-medium py-3 px-6 rounded-lg transition-all duration-200 shadow-accent hover:shadow-card focus:outline-none focus:ring-2 focus:ring-accent-500 focus:ring-offset-2;
+  }
+
+  /* Input Styles */
+  .input-field {
+    @apply w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all duration-200 bg-white text-gray-900 placeholder-gray-500;
+  }
+
+  /* Card Styles */
+  .card {
+    @apply bg-white rounded-xl shadow-card hover:shadow-soft transition-all duration-300 border border-gray-100;
+  }
+
+  .card-gradient {
+    @apply bg-gradient-to-br from-primary-50 to-white rounded-xl shadow-soft hover:shadow-card transition-all duration-300 border border-primary-100;
+  }
+
+  /* Sidebar Styles */
+  .sidebar-item {
+    @apply flex items-center px-4 py-3 text-gray-700 hover:bg-primary-50 hover:text-primary-900 transition-all duration-200 rounded-lg mx-2;
+  }
+
+  .sidebar-item.active {
+    @apply bg-primary-100 text-primary-900 font-medium;
+  }
+
+  /* Animation Classes */
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.3s ease-out;
+  }
+
+  /* Custom Scrollbar */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 3px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+  }
+}
+
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  
+  body {
+    @apply bg-gray-50 text-gray-900;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary-600 hover:bg-primary-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200;
+  }
+  
+  .btn-secondary {
+    @apply bg-gray-200 hover:bg-gray-300 text-gray-900 font-medium py-2 px-4 rounded-lg transition-colors duration-200;
+  }
+  
+  .card {
+    @apply bg-white rounded-lg shadow-sm border border-gray-200 p-6;
+  }
+  
+  .input-field {
+    @apply block w-full rounded-lg border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500;
+  }
+
+  /* Scrolling Background Animations */
+  .animate-scroll {
+    animation: scrollBackground 20s linear infinite;
+  }
+
+  .animate-scroll-delayed {
+    animation: scrollBackgroundDelayed 20s linear infinite;
+  }
+
+  @keyframes scrollBackground {
+    0% {
+      transform: translateX(0) scale(1);
+    }
+    50% {
+      transform: translateX(-10px) scale(1.05);
+    }
+    100% {
+      transform: translateX(0) scale(1);
+    }
+  }
+
+  @keyframes scrollBackgroundDelayed {
+    0% {
+      transform: translateX(0) scale(1.05);
+    }
+    50% {
+      transform: translateX(10px) scale(1);
+    }
+    100% {
+      transform: translateX(0) scale(1.05);
+    }
+  }
+
+  /* Fade In Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  /* Slide Up Animation */
+  @keyframes slideUp {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  /* Kenya Flag Floating Animation */
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-float-delayed {
+    animation: float 6s ease-in-out infinite 2s;
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-20px) rotate(5deg);
+    }
+  }
+
+  /* Pulse Animation for Government Elements */
+  .animate-pulse-kenya {
+    animation: pulseKenya 4s ease-in-out infinite;
+  }
+
+  @keyframes pulseKenya {
+    0%, 100% {
+      opacity: 0.1;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.2;
+      transform: scale(1.05);
+    }
+  }
+}
