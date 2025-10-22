@@ -1,10 +1,11 @@
 import axios from 'axios'
 import { ApiResponse, PaginatedResponse } from '@/types'
+import { config, getApiUrl } from './config'
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001'
-
+// Create axios instance with configuration
 const api = axios.create({
-  baseURL: API_BASE_URL,
+  baseURL: config.api.baseUrl,
+  timeout: config.api.timeout,
   headers: {
     'Content-Type': 'application/json',
   },

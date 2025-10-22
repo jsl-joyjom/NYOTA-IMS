@@ -160,7 +160,7 @@ export default function HomePage() {
               Empowering Kenyan youth through training, savings, and entrepreneurship
             </p>
             <p className="text-gray-500 text-xs sm:text-sm">
-              © 2024 Nyota Platform. All rights reserved.
+              © 2025 Nyota Platform. JSL. All rights reserved.
             </p>
           </div>
         </div>

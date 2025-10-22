@@ -10,7 +10,8 @@
     "lint": "next lint",
     "server": "cd server && npm run dev",
     "db:migrate": "cd server && npm run migrate",
-    "db:seed": "cd server && npm run seed"
+    "db:seed": "cd server && npm run seed",
+    "setup-env": "node setup-env.js"
   },
   "dependencies": {
     "next": "^14.0.0",
